@@ -26,6 +26,24 @@ _You must host this webpage locally_
     * input: stylist name
     * output: The stylist name with a stylist id
 
+* _### add a client name
+    * input: client name
+    * output: The client name with a client id
+
+* _### delete all client names
+    * input: delete all client names
+    * output: will delete all client names with ids.
+
+* _### find all client names attached to a stylist
+    * input: stylist name
+    * output: The client names attached to stylist with a stylist id_stylist
+
+* _### find a client name
+    * input: client name
+    * output: The client name with a client id attached to a stylist id               
+
+
+
 _###One to list all stylists at the salon, including a form to add new stylists.
 Another to display all clients a particular stylist has, including a form to add more clients to a stylist.
 Include edit and delete functionality for both classes in Silex. Each class will require one additional page for the edit form.
