@@ -1,9 +1,9 @@
 <?php
     date_default_timezone_set('America/Los_Angeles');
     require_once __DIR__."/../vendor/autoload.php";
-    require_once __DIR__."/../src/template.php";
+    require_once __DIR__."/../src/Salon.php";
 
-    //Epicodus
+
     $server = 'mysql:host=localhost;dbname=best_restaurants_test';
     $username = 'root';
     $password = 'root';
@@ -20,7 +20,7 @@
 
   //loads actual twig file
     $app->get("/", function() use ($app) {
-      return $app['twig']->render("home.html.twig");
+      return $app['twig']->render("salon.html.twig"), array('stylistsNames' => );
     });
 
   //loads basic php
