@@ -20,7 +20,7 @@ _{An application for a hair Salon. The owner can add Stylist, and clients for ea
 
 _You must host this webpage locally_
 
-## Behavior Driven Development
+## Behavior Driven Development SPECS
 
 * _### add a stylist
     * input: stylist name
@@ -68,7 +68,7 @@ Include edit and delete functionality for both classes in Silex. Each class will
 
 ## Known Bugs
 
-_None yet_
+_isn't passing yet will continue to work on functionality_
 
 ## Support and contact details
 
