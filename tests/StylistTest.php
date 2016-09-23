@@ -6,8 +6,9 @@
     */
 
     require_once "src/Stylist.php";
+    require_once "src/Client.php";
 
-    //Epicodus
+    
     $server = 'mysql:host=localhost;dbname=salon_Test';
     $username = 'root';
     $password = 'root';
