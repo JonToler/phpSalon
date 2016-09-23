@@ -26,6 +26,22 @@ _You must host this webpage locally_
     * input: stylist name
     * output: The stylist name with a stylist id
 
+* _### delete a stylist
+    * input: delete stylist name
+    * output: will delete a stylist name with a stylist id, along with any attached clients.
+
+* _### get a stylist_id
+    * input: stylist name, id
+    * output: The stylist name with a stylist id
+
+* _### get all list of stylist
+    * input: a list of all the salon's stylist
+    * output: The stylist name with a stylist id and clients
+
+* _### find stylists
+    * input: stylist names
+    * output: The stylist names with a stylist id
+
 * _### add a client name
     * input: client name
     * output: The client name with a client id
