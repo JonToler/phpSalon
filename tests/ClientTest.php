@@ -93,6 +93,53 @@
             $this->assertEquals([$test_Client], $result);
         }
 
+        function test_update()
+        {
+            //Arrange
+            $stylist_name = "Beth";
+            $client_name1 = "Jon";
+            $id = null;
+            $test_stylist = new Stylist($stylist_name, $id);
+            $test_stylist->save();
+            $test_client1 = new Client($client_name1, $test_stylist->getId(), $id);
+            $test_Client1->save();
+
+            $new_name = "Jon";
+
+            //Act
+            $test_Client1->update($new_name);
+            $result = Client::find($test_Client1->getId())->getName;
+
+            //Assert
+            $this->assertEquals([$new_name, $result);
+        }
+
+        function test_delete()
+        {
+            //Arrange
+            $stylist_name = "Beth";
+            $client_name1 = "Jon";
+            $client_name2 = "Pat";
+            $client_name3 = "Lee";
+            $id = null;
+            $test_stylist = new Stylist($stylist_name, $id);
+            $test_stylist->save();
+            $test_Client1 = new Client($client_name1, $test_stylist->getId, $id);
+            $test_Client1->save();
+            $test_Client2 = new Client($client_name2, $test_stylist->getId, $id);
+            $test_Client2->save();
+            $test_Client3 = new Client($client_name3, $test_stylist->getId, $id);
+            $test_Client3->save();
+
+            //Act
+            Client::deleteAll();
+            result = Client::getAll();
+
+            //Assert
+            $this->assertEquals([$test_Client2, $test_Client3], getAll());
+        }
+
+
         function test_deleteAll()
         {
             //Arrange
@@ -154,5 +201,7 @@
             //Assert
             $this->assertEquals($test_Client1, $result);
         }
+
+
     }
 ?>

@@ -4,7 +4,7 @@
     require_once __DIR__."/../src/Salon.php";
 
 
-    $server = 'mysql:host=localhost;dbname=best_restaurants_test';
+    $server = 'mysql:host=localhost;dbname=salon_test';
     $username = 'root';
     $password = 'root';
     $DB = new PDO($server, $username, $password);
