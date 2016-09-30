@@ -28,5 +28,16 @@
       return 'test variables here';
     });
 
+    $app->post("/clients", function() use ($app) {
+    $client = new Client($_POST['name']);
+    $client->save();
+    return $app['twig']->render('create_client.html.twig', array('newclient' => $client));
+});
+
+$app->post("/delete_clients", function() use ($app) {
+    Client::deleteAll();
+    return $app['twig']->render('delete_clients.html.twig');
+});
+
     return $app;
 ?>
