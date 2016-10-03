@@ -5,10 +5,10 @@
 <body>
     <h1>Our Styists</h1>
 
-    {% if stylists is not empty %}
+    {% if Stylists is not empty %}
         <p>Here are all your stylists:</p>
         <ul>
-            {% for stylist in stylists %}
+            {% for stylist in Stylists %}
                 <li>{{ stylist.getName }}</li>
             {% endfor %}
         </ul>

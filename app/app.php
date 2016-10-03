@@ -26,8 +26,8 @@
     });
 
     $app->get("/Stylists", function() use ($app) {
-        return $app['twig']->render('Stylists.html.twig', array('Stylists' => stylist::getAll()));
-    });
+         return $app['twig']->render('Stylists.html.twig', array('Stylists' => Stylist::getAll()));
+     });
 
     $app->post("/Clients", function() use ($app) {
         $client = new Client($_POST['name']);
@@ -40,6 +40,15 @@
         return $app['twig']->render('Salon.html.twig');
     });
 
+    $app->post("/Stylists", function() use ($app) {
+            $category = new Category($_POST['name']);
+            $category->save();
+            return $app['twig']->render('Stylists.html.twig', array('Stylists' => Stylist::getAll()));
+        });
 
+        $app->post("/delete_stylists", function() use ($app) {
+            Stylist::deleteAll();
+            return $app['twig']->render('index.html.twig');
+        });
     return $app;
 ?>
