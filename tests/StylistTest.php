@@ -48,6 +48,31 @@
         $this->assertEquals(true, is_numeric($result));
       }
 
+      // function testGetClients()
+      // {
+      //     //Arrange
+      //     $name = "Miss Prism";
+      //     $id = null;
+      //     $test_stylist = new Stylist($name, $id);
+      //     $test_stylist->save();
+      //
+      //     $test_stylist_id = $test_stylist->getId();
+      //
+      //     $client_name = "Billy Yeats";
+      //     $test_client = new Client($client_name, $id, $test_stylist_id);
+      //     $test_client->save();
+      //
+      //     $client_name2 = "Florence Farr";
+      //     $test_client2 = new Client($client_name2, $id, $test_stylist_id);
+      //     $test_client2->save();
+      //
+      //     //Act
+      //     $result = $test_stylist->getClients();
+      //
+      //     //Assert
+      //     $this->assertEquals([$test_client, $test_client2], $result);
+      // }
+
       function test_save()
       {
         //Arrange
