@@ -12,39 +12,39 @@
     <div>
       <h1>Good Morning!</h1>
       <h4>Get ready for another Wilde Hair Day at Oscars</h4>
-
-      <br>
+      <hr>
       <h2>Our Roster of Amazing Stylist</h2>
-      <br>
-
+      <hr>
       {% if stylists is not empty %}
-          <ul class="list-group">
-              {% for stylist in stylists %}
-                  <li class="list-group-item">{{ stylist.getName }} (<a href="/stylists/{{ stylist.getId }}">View Clients</a> | <a href="/stylists/{{ stylist.getId }}/edit">Edit Stylist</a>)</li>
-              {% endfor %}
-          </ul>
+      <ul class="list-group">
+      {% for stylist in stylists %}
+      <li class="list-group-item">{{ stylist.getName }} (<a href="/stylists/{{ stylist.getId }}">View Clients</a> | <a href="/stylists/{{ stylist.getId }}/edit">Edit Stylist</a>)</li>
+      {% endfor %}
+      </ul>
       {% else %}
-          <h4> Our Roster is empty </h4>
-          <br>
-          <h4> Please a add Stylists to the roster</h4>
+      <h4> Our Roster is empty </h4>
+      <hr>
+      <h4> Please a add Stylists to the roster</h4>
       {% endif %}
       <h2>Add a Stylist to the Roster:</h2>
       <form action="/stylists" method="post">
-        <div class="form-group">
-            <label for="stylist_name">Name of Stylist</label>
-            <input class="form-control" type="text" name="stylist_name" required autofocus>
-        </div>
-        <button type="submit" class="btn btn-success">Add Stylist</button>
-        <button type="button" class="btn btn-info btn-clear-fields">Clear Name</button>
+      <div class="form-group">
+        <label for="stylist_name">Name of Stylist</label>
+        <input class="form-control" type="text" name="stylist_name" required autofocus>
+      </div>
+      <button type="submit" class="btn btn-success">Add Stylist</button>
+      <button type="button" class="btn btn-info btn-clear-fields">Clear Name</button>
       </form>
+      <hr>
       <h2>Remove All Stylists and their Clients</h2>
       <form action="/stylists/delete_all" method="post">
-          <button type="submit" class="btn btn-warning">Clear out all Stylists and Clients for the day.</button>
+      <button type="submit" class="btn btn-warning">Clear out all Stylists and Clients for the day.</button>
       </form>
+      <hr>
       <h5>Remove All Clients</h5>
       <form action="/clients/delete_all" method="post">
-          <button type="submit" class="btn btn-outline-success">Clear all Clients for the day!</button>
+      <button type="submit" class="btn btn-outline-success">Clear all Clients for the day!</button>
       </form>
-    </div>
+  </div>
   </body>
 </html>

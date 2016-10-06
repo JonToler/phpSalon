@@ -1,6 +1,6 @@
 
 <?php
-    class Client
+  class Client
   {
     private $name;
     private $stylist_id;
