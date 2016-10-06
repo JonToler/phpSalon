@@ -19,15 +19,17 @@
                   <input class="form-control" type="text" name="new_client_name" required autofocus placeholder="{{ client.getName }}">
               </div>
               <button type="submit" class="btn btn-success">Update Client</button>
-              <a class="btn btn-info" href="/">Cancel</a>
+
           </form>
           <hr>
           <br>
           <h2>Remove {{ client.getName }}?</h2>
           <form action="/clients/{{ client.getId }}/delete" method="post">
               <input name="_method" type="hidden" value="delete">
-              <button type="submit" class="btn btn-warning">Clear out all Stylists and Clients for the day.</button>
-              <a class="btn btn-info" href="/">Cancel</a>
+              <button type="submit" class="btn btn-warning">Cancel this appointment</button>
+            <br>
+            <hr>
+              <a class="btn btn-info" href="/"> Cancel Return</a>
           </form>
       </div>
     </body>

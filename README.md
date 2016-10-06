@@ -1,5 +1,6 @@
 # _{Hair Salon}_
 https://jontoler.github.io/phpSalon/
+
 #### _{An application for a hair Salon. The owner can add Stylist, and clients for each stylist, {Date of current version}_
 
 #### By _**Jon Toler**_
@@ -27,43 +28,53 @@ The User can add a stylist to the days Roster.
     * input: stylist name "Miss Prisim"
     * output: The stylist Miss Prisim with an assigned stylist id
 
-* _### delete a stylist
-The User can remove a Stylist from the roster for the day.
-    * input: The User navigates to the edit page an clicks the green "Remove this Stylist form the roster for the day" button
-    * output: will delete a stylist name with a stylist id, along with any attached clients.
-
 * _### get a stylist_id
 An Id is assigned to a Stylist when they are added to the days roster.
     * input: stylist name, id
     * output: The stylist name with a stylist id
 
 * _### get all list of stylist
+The Stylist will display in a list called "Our Roster of Amazing Stylist"
     * input: a list of all the salon's stylist
-    * output: The stylist name with a stylist id and clients
+    * output: The stylist name with a stylist id and  a link to view clients
 
-* _### find stylists
-    * input: stylist names
-    * output: The stylist names with a stylist id
+* _### delete a stylist
+The User can remove a Stylist from the roster for the day.
+    * input: The User navigates to the edit page an clicks the green "Remove this Stylist form the roster for the day" button
+    * output: will delete a stylist name with a stylist id, along with any attached clients.
+
+* _### Update a Stylist name
+A Stylist name can be updated
+    * input: The user can use the Green "Update Client" button.
+    * output: will change the clients name if inputted into the field.    
 
 * _### add a client name
-    * input: client name
-    * output: The client name with a client id
+Clients can be assigned to a stylists for the day.
+    * input: client name "Florence Farr"
+    * output: The client "Florence Farr" will be created and assigned id
+
+* _### delete a client name
+A Clients can be removed from Stylists the schedule.
+  * input: The user can use the Green "Remove Stylists for the day" button.
+  * output: will delete all client names, and Client ids.    
 
 * _### delete all client names
-    * input: delete all client names
-    * output: will delete all client names with ids.
+All Clients can be cleared from Stylists schedule of Clients.
+    * input: The user can use the Green "Clear all Clients for the day" button.
+    * output: will delete all client names, and Client ids.
 
-* _### find all client names attached to a stylist
-    * input: stylist name
-    * output: The client names attached to stylist with a stylist id_stylist
+* _### delete all Stylists names
+All Clients can be cleared from Stylists schedule of Clients.
+    * input: The user can use the Orange "Clear out all Stylists, and Clients for the day" button.
+    * output: will delete all Stylists and client names, and ids as well.
 
-* _### find a client name
-    * input: client name
-    * output: The client name with a client id attached to a stylist id               
+* _### Update a clients name
+A Clients name can be updated
+    * input: The user can use the Green "Update Client" button.
+    * output: will change the clients name if inputted into the field.    
 
 
-
-_###One to list all stylists at the salon, including a form to add new stylists.
+###One to list all stylists at the salon, including a form to add new stylists.
 Another to display all clients a particular stylist has, including a form to add more clients to a stylist.
 Include edit and delete functionality for both classes in Silex. Each class will require one additional page for the edit form.
 
@@ -71,7 +82,7 @@ Include edit and delete functionality for both classes in Silex. Each class will
 
 ## Known Bugs
 
-_isn't passing yet will continue to work on functionality_
+_NA_
 
 ## Support and contact details
 

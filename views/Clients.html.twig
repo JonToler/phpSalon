@@ -20,23 +20,24 @@
                   {% endfor %}
               </ul>
           {% else %}
-              <h4>add Clients</h4>
+              <h4>Please add some Clients to the Schedule</h4>
           {% endif %}
-          <h1>Please add some Clients to the Schedule</h1>
+          <hr>
           <form action="/clients/{{ stylist.getId }}/add" method="post">
               <div class="form-group">
                   <label for="client_name">Name of Client</label>
                   <input class="form-control" type="text" name="client_name" required autofocus>
               </div>
               <button type="submit" class="btn btn-success">Add Client</button>
-              <button type="button" class="btn btn-info btn-clear-fields">Clear Name</button>
+              <hr>
           </form>
           <h2>Remove All of {{ stylist.getName }}'s Clients</h2>
           <form action="/clients/{{ stylist.getId }}/delete_all" method="post">
               <button type="submit" class="btn btn-success">Clear all Clients for the day!</button>
           </form>
-          <hr
-          <h1> <a href="/">Return back to the Stylists list</a></h1>
+          <br>
+          <hr>
+            <a class="btn btn-info" href="/"> Cancel Return</a>
       </div>
     </body>
 </html>

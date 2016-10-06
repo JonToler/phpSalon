@@ -21,15 +21,17 @@
                <input class="form-control" type="text" name="new_stylist_name" required autofocus placeholder="{{ stylist.getName }}">
            </div>
            <button type="submit" class="btn btn-success">Update Stylist</button>
-           <a class="btn btn-info" href="/">Cancel</a>
+
        </form>
        <hr>
        <br>
        <h2>Remove {{ stylist.getName }}?</h2>
        <form action="/stylists/{{ stylist.getId }}" method="post">
            <input name="_method" type="hidden" value="delete">
-           <button type="submit" class="btn btn-success">Remove this stylists from the roster for the day.</button>
-           <a class="btn btn-info" href="/">Cancel</a>
+           <button type="submit" class="btn btn-warning">Remove this stylists from the roster for the day.</button>
+           <br>
+           <hr>
+             <a class="btn btn-info" href="/"> Cancel Return</a>
        </form>
    </div>
     </body>
