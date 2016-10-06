@@ -12,32 +12,31 @@
     <body>
         <div class="container">
 
-            <h4>{{ stylist.getName }}'s Clients</h4>
-            {% if clients is not empty %}
-                <ul class="list-group">
-                    {% for client in clients %}
-                        <li class="list-group-item">{{ client.getName }} (<a href="/clients/{{ client.getId }}/edit">Edit Client</a>)</li>
-                    {% endfor %}
-                </ul>
-            {% else %}
-            <br>
-                <h2>Please add some Clients to the schedule</h2>
-            {% endif %}
-            <h1>Please add some Clients to the schedule</h1>
-            <form action="/clients/{{ stylist.getId }}/add" method="post">
-                <div class="form-group">
-                    <label for="client_name">Name of Client</label>
-                    <input class="form-control" type="text" name="client_name">
-                </div>
-                <button type="submit" class="btn btn-outline-success">Add Client</button>
-                <button type="button" class="btn btn-outline-info btn-clear-fields">Clear Name</button>
-            </form>
-            <h2>Remove All of {{ stylist.getName }}'s Clients</h2>
-            <form action="/clients/{{ stylist.getId }}/delete_all" method="post">
-                <button type="submit" class="btn btn-outinline-warning">Start from Scratch!</button>
-            </form>
-            <hr>
-          </div>
-          <h4><a href = "/">Return</a></h4>
+          <h4>{{ stylist.getName }}'s Clients</h4>
+          {% if clients is not empty %}
+              <ul class="list-group">
+                  {% for client in clients %}
+                      <li class="list-group-item">{{ client.getName }} (<a href="/clients/{{ client.getId }}/edit">Edit Client</a>)</li>
+                  {% endfor %}
+              </ul>
+          {% else %}
+              <h4>add Clients</h4>
+          {% endif %}
+          <h1>Please add some Clients to the Schedule</h1>
+          <form action="/clients/{{ stylist.getId }}/add" method="post">
+              <div class="form-group">
+                  <label for="client_name">Name of Client</label>
+                  <input class="form-control" type="text" name="client_name" required autofocus>
+              </div>
+              <button type="submit" class="btn btn-success">Add Client</button>
+              <button type="button" class="btn btn-info btn-clear-fields">Clear Name</button>
+          </form>
+          <h2>Remove All of {{ stylist.getName }}'s Clients</h2>
+          <form action="/clients/{{ stylist.getId }}/delete_all" method="post">
+              <button type="submit" class="btn btn-success">Clear all Clients for the day!</button>
+          </form>
+          <hr
+          <h1> <a href="/">Return back to the Stylists list</a></h1>
+      </div>
     </body>
 </html>

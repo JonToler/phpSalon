@@ -12,23 +12,25 @@
     <body>
         <div class="container">
 
-            <h2>Update {{ stylist.getName }}'s Info</h2>
-            <form action="/stylists/{{ stylist.getId }}" method="post">
-                <input name="_method" type="hidden" value="patch">
-                <div class="form-group">
-                    <label for="new_stylist_name">Name of Stylist</label>
-                    <input class="form-control" type="text" name="new_stylist_name"  placeholder="{{ stylist.getName }}">
-                </div>
-                <button type="submit" class="btn btn-outline-success">Update Stylist</button>
-                <a class="btn btn-outline-warning" href="/">Cancel</a>
-            </form>
-            <h2>Remove {{ stylist.getName }}?</h2>
-            <form action="/stylists/{{ stylist.getId }}" method="post">
-                <input name="_method" type="hidden" value="delete">
-                <button type="submit" class="btn btn-info">Remove all Stylists</button>
-                <a class="btn btn-warning" href="/">Cancel</a>
-            </form>
-            <h4><a href = "/">Return</a></h4>
-        </div>
+
+       <h2>Update {{ stylist.getName }}'s Info</h2>
+       <form action="/stylists/{{ stylist.getId }}" method="post">
+           <input name="_method" type="hidden" value="patch">
+           <div class="form-group">
+               <label for="new_stylist_name">Name of Stylist</label>
+               <input class="form-control" type="text" name="new_stylist_name" required autofocus placeholder="{{ stylist.getName }}">
+           </div>
+           <button type="submit" class="btn btn-success">Update Stylist</button>
+           <a class="btn btn-info" href="/">Cancel</a>
+       </form>
+       <hr>
+       <br>
+       <h2>Remove {{ stylist.getName }}?</h2>
+       <form action="/stylists/{{ stylist.getId }}" method="post">
+           <input name="_method" type="hidden" value="delete">
+           <button type="submit" class="btn btn-success">Remove this stylists from the roster for the day.</button>
+           <a class="btn btn-info" href="/">Cancel</a>
+       </form>
+   </div>
     </body>
 </html>

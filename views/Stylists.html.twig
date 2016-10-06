@@ -1,50 +1,50 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <meta charset="utf-8">
-        <link rel="stylesheet" href="/css/bootstrap.min.css" type="text/css">
-        <link rel="stylesheet" href="/css/styles.css" type="text/css">
-        <script src="/js/jquery-3.1.0.min.js" type="text/javascript"></script>
-        <script src="/js/bootstrap.min.js" type="text/javascript"></script>
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="/css/bootstrap.min.css" type="text/css">
+    <link rel="stylesheet" href="/css/styles.css" type="text/css">
+    <script src="/js/jquery-3.1.0.min.js" type="text/javascript"></script>
+    <script src="/js/bootstrap.min.js" type="text/javascript"></script>
+    <title>Oscars Wilde Hair Day</title>
+  </head>
+  <body>
+    <div>
+      <h1>Good Morning!</h1>
+      <h4>Get ready for another Wilde Hair Day at Oscars</h4>
 
-        <title>Oscars Wilde Hair Day</title>
-    </head>
-    <body>
-        <div class="container">
-            <p>Our Stylists</p>
-            {% if stylists is not empty %}
-                <ul class="list-group">
-                    {% for stylist in stylists %}
-                        <li class="list-group-item">{{ stylist.getName }} (<a href="/stylists/{{ stylist.getId }}/edit">Edit Clients</a> | <a href="/stylists/{{ stylist.getId }}/edit">Edit Stylist</a>)</li>
-                    {% endfor %}
-                </ul>
-            {% else %}
-                <h4>No stylists</h4>
-                <br>
-                <h3> Please add Stylist to the roster some now!</h3>
-            {% endif %}
-            <h2>Add a Stylist:</h2>
-            <br>
+      <br>
+      <h2>Our Roster of Amazing Stylist</h2>
+      <br>
 
-            <form action="/stylists" method="post">
-                <div class="form-group">
-                    <label for="stylist_name">Name of Stylist</label>
-                    <input class="form-control" type="text" name="stylist_name">
-                </div>
-                <button type="submit" class="btn btn-outline-success">Add Stylist</button>
-                <button type="button" class="btn btn-outline-info btn-clear-fields">Clear Name</button>
-            </form>
-            <h2>Remove All Stylists</h2>
-            <p>This will also delete all Clients!</p>
-            <form action="/stylists/delete_all" method="post">
-                <button type="submit" class="btn btn-outline-danger">Remove all stylists</button>
-            </form>
-            <h2>Remove All Clients</h2>
-            <form action="/clients/delete_all" method="post">
-                <button type="submit" class="btn btn-info btn-sm">Remove all clients from the current schedule</button>
-            </form>
+      {% if stylists is not empty %}
+          <ul class="list-group">
+              {% for stylist in stylists %}
+                  <li class="list-group-item">{{ stylist.getName }} (<a href="/stylists/{{ stylist.getId }}">View Clients</a> | <a href="/stylists/{{ stylist.getId }}/edit">Edit Stylist</a>)</li>
+              {% endfor %}
+          </ul>
+      {% else %}
+          <h4> Our Roster is empty </h4>
+          <br>
+          <h4> Please a add Stylists to the roster</h4>
+      {% endif %}
+      <h2>Add a Stylist to the Roster:</h2>
+      <form action="/stylists" method="post">
+        <div class="form-group">
+            <label for="stylist_name">Name of Stylist</label>
+            <input class="form-control" type="text" name="stylist_name" required autofocus>
         </div>
-<h4><a href = '/clients'>Add clients</a></h4>
-
-    </body>
+        <button type="submit" class="btn btn-success">Add Stylist</button>
+        <button type="button" class="btn btn-info btn-clear-fields">Clear Name</button>
+      </form>
+      <h2>Remove All Stylists and their Clients</h2>
+      <form action="/stylists/delete_all" method="post">
+          <button type="submit" class="btn btn-warning">Clear out all Stylists and Clients for the day.</button>
+      </form>
+      <h2>Remove All Clients</h2>
+      <form action="/clients/delete_all" method="post">
+          <button type="submit" class="btn btn-outline-success">Clear all Clients for the day!</button>
+      </form>
+    </div>
+  </body>
 </html>

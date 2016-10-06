@@ -23,14 +23,17 @@ _You must host this webpage locally_
 ## Behavior Driven Development SPECS
 
 * _### add a stylist
-    * input: stylist name
-    * output: The stylist name with a stylist id
+The User can add a stylist to the days Roster.
+    * input: stylist name "Miss Prisim"
+    * output: The stylist Miss Prisim with an assigned stylist id
 
 * _### delete a stylist
-    * input: delete stylist name
+The User can remove a Stylist from the roster for the day.
+    * input: The User navigates to the edit page an clicks the green "Remove this Stylist form the roster for the day" button
     * output: will delete a stylist name with a stylist id, along with any attached clients.
 
 * _### get a stylist_id
+An Id is assigned to a Stylist when they are added to the days roster.
     * input: stylist name, id
     * output: The stylist name with a stylist id
 
