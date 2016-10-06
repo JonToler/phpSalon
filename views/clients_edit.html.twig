@@ -6,28 +6,28 @@
         <link rel="stylesheet" href="/css/styles.css" type="text/css">
         <script src="/js/jquery-3.1.0.min.js" type="text/javascript"></script>
         <script src="/js/bootstrap.min.js" type="text/javascript"></script>
-        <script src="/js/scripts.js" type="text/javascript"></script>
-        <title>Oscar's Wilde Hair Day</title>
+        <title>Oscars Wilde Hair Day</title>
     </head>
     <body>
         <div class="container">
 
             <h2>Update {{ client.getName }}'s Info</h2>
-            <form action="/clients/{{ client.getId }}" method="post">
+            <form action="/clients/{{ clients.getId }}" method="post">
                 <input name="_method" type="hidden" value="patch">
                 <div class="form-group">
                     <label for="new_client_name">Name of Client</label>
-                    <input class="form-control" type="text" name="new_client_name" required autofocus placeholder="{{ client.getName }}">
+                    <input class="form-control" type="text" name="new_client_name" placeholder="{{ client.getName }}">
                 </div>
                 <button type="submit" class="btn btn-outline-success">Update Client</button>
-                <a class="btn btn-warning" href="/">Cancel</a>
+                <a class="btn btn-outline-warning" href="/">Cancel</a>
             </form>
             <h2>Remove {{ client.getName }}?</h2>
             <form action="/clients/{{ client.getId }}/delete" method="post">
                 <input name="_method" type="hidden" value="delete">
-                <button type="submit" class="btn btn-danger">Remove all Clients</button>
+                <button type="submit" class="btn btn-outline-info">Remove all Clients</button>
                 <a class="btn btn-outline-warning" href="/">Cancel</a>
             </form>
+            <h4><a href = '/'>Return</a></h4>
         </div>
     </body>
 </html>
